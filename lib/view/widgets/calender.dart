@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../repository/registration_services.dart';
+import '../../resources/registration_services.dart';
 
 class Calender extends StatelessWidget {
   const Calender({

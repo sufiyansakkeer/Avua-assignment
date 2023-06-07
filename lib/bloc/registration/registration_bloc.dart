@@ -2,8 +2,8 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:avua_assignment/model/registration_form/registration_form_model.dart';
-import 'package:avua_assignment/repository/hive_functions.dart';
-import 'package:avua_assignment/repository/registration_services.dart';
+import 'package:avua_assignment/resources/hive_functions.dart';
+import 'package:avua_assignment/resources/registration_services.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +20,7 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
       final result = await reg.getFile();
       if (result != null) {
         File pdfPath = File(result.files.single.path!);
+        log(pdfPath.toString());
         File pdfName = File(result.files.single.name);
 
         emit(RegistrationInitial());

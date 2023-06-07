@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:file_picker/file_picker.dart';
 import 'package:intl/intl.dart';
 
@@ -46,6 +48,7 @@ class RegistrationServices {
       type: FileType.custom,
       allowedExtensions: ["pdf", "docx"],
     );
+    log(result!.files.single.path.toString());
 
     return result;
   }

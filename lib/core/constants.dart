@@ -7,5 +7,5 @@ const SizedBox height20 = SizedBox(
   height: 20,
 );
 const SizedBox height30 = SizedBox(
-  height: 30,
+  height: 70,
 );

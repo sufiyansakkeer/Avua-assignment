@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:avua_assignment/bloc/forms/forms_bloc.dart';
 import 'package:avua_assignment/core/constants.dart';
 import 'package:avua_assignment/model/registration_form/registration_form_model.dart';
 
@@ -213,6 +214,8 @@ class _RegistrationFormState extends State<RegistrationForm> {
                                 RegistrationAddEvent(
                                     registrationFormModel: formModel,
                                     context: context));
+                            BlocProvider.of<FormsBloc>(context)
+                                .add(GetAllForms());
                           }
                         }
                       },

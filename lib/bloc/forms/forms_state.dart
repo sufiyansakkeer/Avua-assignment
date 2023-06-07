@@ -9,10 +9,10 @@ abstract class FormsState extends Equatable {
 
 class FormsInitial extends FormsState {}
 
-class FormsLoadingState extends FormState {}
+class FormsLoadingState extends FormsState {}
 
-class FormsLoadedState extends FormState {
+class FormsLoadedState extends FormsState {
   final List<RegistrationFormModel> registrationForms;
 
-  FormsLoadedState({required this.registrationForms});
+  const FormsLoadedState({required this.registrationForms});
 }

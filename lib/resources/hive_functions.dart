@@ -9,6 +9,7 @@ class HiveFunctions {
       RegistrationFormModel formModel, BuildContext context) async {
     var box = await Hive.openBox<RegistrationFormModel>(_registrationDB);
     box.put(formModel.id, formModel);
+    getAllForms();
     if (context.mounted) {
       Navigator.of(context).pop();
     }
