@@ -11,14 +11,19 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         title: const Text("Home Screen"),
       ),
-      body: const Center(
-        child: Text("Add Form"),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(" data $index"),
+          );
+        },
+        itemCount: 20,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => RegistrationForm(),
+          builder: (context) => const RegistrationForm(),
         )),
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
